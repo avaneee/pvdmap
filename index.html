@@ -63,14 +63,13 @@
 </head>
 
 <body>
-// a trip down memory lane 
-<p>college hill at its finest</p>
+    <p>a trip down memory lane (i started at college hill & got slightly carried away)</p>
 
     <!-- The map container element -->
     <div id="map"></div>
     <div>
-</div>
-    
+    </div>
+
 
     <script>
         // START JS
@@ -106,63 +105,87 @@
         var sayles = L.marker([41.82622938545397, -71.40253614309205]).addTo(map);
         var lyman = L.marker([41.82655479799196, -71.40186024330407]).addTo(map);
         var salomon = L.marker([41.82653529262718, -71.40240656728974]).addTo(map);
+        var pagerob = L.marker([41.827404229028205, -71.4027773615419]).addTo(map);
 
         // quiet green area
         var rock = L.marker([41.825733071297165, -71.405069146859564]).addTo(map);
         var hay = L.marker([41.82632766192504, -71.4050233895969]).addTo(map);
         var list = L.marker([41.82653549980494, -71.4054381171395]).addTo(map);
         var manning = L.marker([41.82648740797234, -71.40386261424362]).addTo(map);
+        var quietgreen = L.marker([41.82617017712202, -71.404225754351594]).addTo(map);
 
 
-        
+        // north
+        var uel = L.marker([41.82768579933989, -71.40221077304113]).addTo(map);
+        var sidneyfrank = L.marker([41.82915226421758, -71.40229243931323]).addTo(map);
+        var bdw = L.marker([41.826862412143704, -71.39850710723638]).addTo(map);
+        var erc = L.marker([41.826514721551554, -71.39781380487273]).addTo(map);
+
+        var barus = L.marker([41.8261945302401, -71.39786125522461]).addTo(map);
+        var scili = L.marker([41.82700188072436, -71.40021795620531]).addTo(map);
+
+
+        var euclid = L.marker([41.82858370096826, -71.39995119414438]).addTo(map);
+        var ceremony = L.marker([41.82858959385539, -71.39971394234574]).addTo(map);
+        var avon = L.marker([41.82889013038077, -71.40084220652506]).addTo(map);
+        var andrews = L.marker([41.83047136143254, -71.40249769696288]).addTo(map);
+        var mochamp = L.marker([41.83020618876327, -71.40177803314617]).addTo(map);
+
+
+
+
+
+
+
 
         // to add
-        
-        
-        var pagerob = L.marker([41.827, -71.404]).addTo(map);
-        var quietgreen = L.marker([41.827, -71.404]).addTo(map);
-        var sidneyfrank = L.marker([41.827, -71.404]).addTo(map);
 
-        var barus = L.marker([41.827, -71.404]).addTo(map);
-        var bdw = L.marker([41.827, -71.404]).addTo(map);
-        var erc = L.marker([41.827, -71.404]).addTo(map);
-        var scili = L.marker([41.827, -71.404]).addTo(map);
-        var euclid = L.marker([41.827, -71.404]).addTo(map);
-        var ceremony = L.marker([41.827, -71.404]).addTo(map);
-        var andrews = L.marker([41.827, -71.404]).addTo(map);
+
         var everpol = L.marker([41.827, -71.404]).addTo(map);
         var archie = L.marker([41.827, -71.404]).addTo(map);
-        var washingtonplace = L.marker([41.827, -71.404]).addTo(map);
-        var risdgd = L.marker([41.827, -71.404]).addTo(map);
+
         var ratty = L.marker([41.827, -71.404]).addTo(map);
-        var avon = L.marker([41.827, -71.404]).addTo(map);
         var nelsonent = L.marker([41.827, -71.404]).addTo(map);
         var nelsongym = L.marker([41.827, -71.404]).addTo(map);
-        var mochamp = L.marker([41.827, -71.404]).addTo(map);
         var wilbour = L.marker([41.827, -71.404]).addTo(map);
         var prospect = L.marker([41.827, -71.404]).addTo(map);
         var indiapoint = L.marker([41.827, -71.404]).addTo(map);
         var cofx = L.marker([41.827, -71.404]).addTo(map);
         var pvddonuts = L.marker([41.827, -71.404]).addTo(map);
         var traderjoes = L.marker([41.827, -71.404]).addTo(map);
-        var fleet = L.marker([41.827, -71.404]).addTo(map);
+
         var powerst = L.marker([41.827, -71.404]).addTo(map);
         var gcb = L.marker([41.827, -71.404]).addTo(map);
         var ivy = L.marker([41.827, -71.404]).addTo(map);
         var mencoff = L.marker([41.827, -71.404]).addTo(map);
+        var gregA = L.marker([41.827, -71.404]).addTo(map);
+        var gregB = L.marker([41.827, -71.404]).addTo(map);
+        var thayertunnel = L.marker([41.827, -71.404]).addTo(map);
+
+
+        // outside 
+        var washingtonplace = L.marker([41.827294159797255, -71.40925254773713]).addTo(map);
+        var fleet = L.marker([41.82569397543868, -71.40940124911886]).addTo(map);
+        var risdgd = L.marker([41.8264918129232, -71.40860003804139]).addTo(map);
+        var benevs = L.marker([41.827, -71.404]).addTo(map);
+        var waterman = L.marker([41.827, -71.404]).addTo(map);
+        var pastiche = L.marker([41.827, -71.404]).addTo(map);
 
 
 
 
 
-        
-        
+
+
+
+
+
 
 
 
         // Bind popups to the shapes from before
-		marker1.bindPopup("<b>Hello world!</b><br>I am a popup.");
-        
+        marker1.bindPopup("<b>Hello world!</b><br>I am a popup.");
+
         // main green area
         blueroom.bindPopup("iced lattes with vanilla oat & chocolate chip muffins");
         fauncesteps.bindPopup("many salads were eaten here");
@@ -183,36 +206,56 @@
 
 
         // thayer area
+        thayertunnel.bindPopup("ripta from here was the biggest hack");
+        gregA.bindPopup("the first day that 2023 september when we were so excited to finally have a place od our own - our own sink!! our own lounge!! also that one night we watched rocky aur rani and all the other movies we watched on our projector while discovering all those trader joes snacks");
+        gregB.bindPopup("the nerf war that spanned all four floors, the day we pulled an all-nighter to watch the cricket world cup final, and also that one time we pranked parth with the water/wine bottle");
+        euclid.bindPopup("4b holds so many memories - the noise complaints, the cookies, the nights spent watching desperate housewives, the morning debriefs, tree wars, the people (and animals) who have been here - the list never ends");
+        ceremony.bindPopup("the great blizzard of 2026 when they opened this place up at night and we had hot chocolate");
+        nelsonent.bindPopup("the nights we spent on the 1010 project where we did everything but make expandable kids bicycles");
+        scili.bindPopup("the night before trade on the 8th floor when we pranked falak and then pulled an all nighter");
+
+
+        //north campus
+        andrews.bindPopup("weekend granola bowls and cancun planning"); sidneyfrank.bindPopup("the one amazing room that we always ended up working in on fridays and got kicked out for that 4pm meeting");
+
+        gcb.bindPopup("learnt sanskrit here");
+        nelsongym.bindPopup("learnt sanskrit here");
+
+        // outside
+        washingtonplace.bindPopup("i learnt how to code this website in the basement of this building");
+        risdgd.bindPopup("my first risd class was here");
+        fleet.bindPopup("weekend granola bowls and cancun planning");
+        benevs.bindPopup("weekend granola bowls and cancun planning");
+        waterman.bindPopup("weekend granola bowls and cancun planning");
+        prospect.bindPopup("weekend granola bowls and cancun planning");
+        indiapoint.bindPopup("weekend granola bowls and cancun planning");
+        traderjoes.bindPopup("weekend granola bowls and cancun planning");
+        cofx.bindPopup("weekend granola bowls and cancun planning");
+        pastiche.bindPopup("weekend granola bowls and cancun planning");
+        pvddonuts.bindPopup("weekend granola bowls and cancun planning");
+
 
 
         // IDEAS
-        
-        // euclid - 4b holds so many memories - the noise complaints, the cookies, the nights spent watching desperate housewives, the morning debriefs, tree wars, the people (and animals) who have been here - the list never ends
-        // ceremony - that one snow day when they opened this place at night and we had hot chocolate 
-        // sidney frank - the one great room that we always ended up working in on fridays and got kicked out for that 4pm meeting
-        // greg b - the nerf war that spanned all four floors, the day we pulled an all-nighter to watch the cricket world cup final, and also that one time we pranked parth with the water/wine bottle
-        // greg a - the first day that 2023 september when we were so excited to finally have a place od our own - our own sink!! our own lounge!! also that one night we watched rocky aur rani and all the other movies we watched on our projector while discovering all those trader joes snacks
+
         // everpol - the louis challenge night in e-319 while yeh dooriyan played, the movie nights with lilly, the tiktoks, the planks, the birb wars, the maggi
-        // scili - the night before trade on the 8th floor when we pranked falak and then pulled an all nighter
         // pembrooke field house - both the psab shaadis and our amazing dance sequences (ballay ballay, mehboob, and ghungroo always in my heart)
         // nelson - the morning gyms and evening gyms but mostly morning gyms
         // india point - spinned down the hill to watch the sunsets here
         // mencoff hall - spent eight hours here for art thesis presentations that one day
-        // washington place - i learnt how to code this website in the basement of this building
-        // risd store - my first risd class was here 
-    
+
+
         // barus - was traumatised by the investments question bank and the naked donut run in the erc, also the 1001 nights classes i loved those
         // bdw - laser cutters you will be missed
-        
-        // nelson entrepreneurship - the nights we spent on the 1010 project where we did everything but the project
+
         // uel - i remember studying for the arts of asia final here in freshman fall
         // page rob - meetings at the globe with bisola and syrina
         // manning - and they were singing bye bye miss american pie
         // suitcase rolled down the hill
 
 
-		// Create a popup variable attached to our map from before
-		var popup = L.popup();
+        // Create a popup variable attached to our map from before
+        var popup = L.popup();
 
         // END JS
     </script>
