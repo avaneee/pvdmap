@@ -1,81 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Leaflet!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memories on college hill</title>
 
-	<!-- Leaflet’s custom CSS -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-	crossorigin=""/>
+    <!-- Leaflet’s custom CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 
-	<!-- Leaflet’s custom JS -->
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-	crossorigin=""></script>
+    <!-- Leaflet’s custom JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-	<style>
-		/* START CSS */
+    <style>
+        /* START CSS */
 
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-		#map {
-			height: 100dvh;
-		}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-		/* CUSTOMIZE POP-UPS! */
-		.leaflet-popup-content-wrapper {
-			
-		}
-		.leaflet-popup-tip {
-			
-		}
-		.leaflet-popup-content {
-			
-		}
-		.leaflet-popup-close-button span {
-			
-		}
+        #map {
+            height: 100dvh;
+        }
 
-		/* END CSS */
-	</style>
+        .intro {
+            font-family: times;
+            font-size: 15px;
+            background-color: antiquewhite;
+            border-radius: 5%;
+            z-index: 99;
+            align-items: center;
+            display: inline-block;
+        }
+
+        /* CUSTOMIZE POP-UPS!  */
+        .leaflet-popup-content-wrapper {
+            background-color: rgb(245, 245, 178);
+            border-radius: 0;
+            border: 1.5px solid rgb(192, 192, 117);
+            padding: 1px;
+        }
+
+        .leaflet-popup-tip {
+            background-color: rgb(245, 245, 178);
+            border: 1.5px solid rgb(192, 192, 117);
+        }
+
+        .leaflet-popup-content {
+            font-family: sans-serif;
+            font-style: italic;
+        }
+
+        .leaflet-popup-close-button span {}
+
+        /* END CSS */
+    </style>
 
 </head>
+
 <body>
-	
-	<!-- The map container element -->
-	<div id="map"></div>
+// want some text that stays in a box over the whole map - check 
+// a trip down memory lane 
+// college hill at its finest
 
-	<script>
-		// START JS
+    <!-- The map container element -->
+    <div id="map"></div>
+    <div>
+</div>
+    
 
-		// Initialize a map with two values:
-		// - An array with lat/long coordinates
-		// - Number for zoom level
-		var map = L.map('map').setView([51.505, -0.09], 13);
+    <script>
+        // START JS
 
-		// Load in data from openstreetmap.org
-		L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-			maxZoom: 19,
-			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-		}).addTo(map);
-		
-		// Helper function to get random number in range
-		function randomFloat(min, max) {
-			let range = max-min;
-			return Math.random()*range + min
-		}
+        // Initialize a map with two values:
+        // - An array with lat/long coordinates
+        // - Number for zoom level
+        const map = L.map('map').setView([41.827, -71.404], 17);
 
-		// Add code for markers and interactivity below!
+        // Load in data from openstreetmap.org
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
 
-		
+        // Helper function to get random number in range
+        function randomFloat(min, max) {
+            let range = max - min;
+            return Math.random() * range + min
+        }
 
-		// END JS
-	</script>
+        // Add code for markers and interactivity below!
+        // add markers
+        var marker1 = L.marker([41.827, -71.404]).addTo(map);
+        var blueroom = L.marker([41.826848507278235, -71.40351927283476]).addTo(map);
+        var fauncesteps = L.marker([41.826708, -71.403313]).addTo(map);
+        var bench = L.marker([41.826484, -71.403596]).addTo(map);
+        var cs15 = L.marker([41.826544, -71.403195]).addTo(map);
+        var bear = L.marker([41.82669125892266, -71.40282878864762]).addTo(map);
+
+        
+
+
+
+        // Bind popups to the shapes from before
+		marker1.bindPopup("<b>Hello world!</b><br>I am a popup.");
+        
+        // main green
+        blueroom.bindPopup("iced lattes with vanilla oat & chocolate chip muffins");
+        fauncesteps.bindPopup("many salads were eaten here");
+        cs15.bindPopup("it was a sunny day on the main green so i decided to drop cs15");
+        bear.bindPopup("that walk freshman fall where we climbed up the bear statues");
+        bench.bindPopup("the og bench with mikes calzones");
+
+        // IDEAS
+        
+        // euclid - 4b holds so many memories - the noise complaints, the cookies, the nights spent watching desperate housewives, the morning debriefs, tree wars, the people (and animals) who have been here - the list never ends
+        // ceremony - that one snow day when they opened this place at night and we had hot chocolate 
+        // list - many nights and many days spent in the different studios, made so many new friends here bonding over the immense manual labor that is required to set up a thesis show, sunsets form the 510 balcony, painting in that stairwell with juliana in freshman year
+        // rhode island hall - where we showcased our very own blockbuster - the partition of laksh, and im sure we traumatised half of the indian cinema class (peaked at om shanti om)
+        // greg b - the nerf war that spanned all four floors, the day we pulled an all-nighter to watch the cricket world cup final, and also that one time we pranked parth with the water/wine bottle
+        // greg a - the first day that 2023 september when we were so excited to finally have a place od our own - our own sink!! our own lounge!! also that one night we watched rocky aur rani and all the other movies we watched on our projector while discovering all those trader joes snacks
+        // everpol - the louis challenge night in e-319 while yeh dooriyan played, the movie nights with lilly, the tiktoks, the planks, the birb wars, the maggi
+        // scili - the night before trade on the 8th floor when we pranked falak and then pulled an all nighter
+        // pembrooke field house - both the psab shaadis and our amazing dance sequences (ballay ballay, mehboob, and ghungroo always in my heart)
+        // nelson - the morning gyms and evening gyms but mostly morning gyms
+        // india point - spinned down the hill to watch the sunsets here
+        // mencoff hall - spent eight hours here for art thesis presentations that one day
+        // washington place - i learnt how to code this website in the basement of this building
+        // risd store - my first risd class was here 
+        // sayles - one of the first snow days in freshman year when we spent hours in the classroom upstairs doing god knows what
+        // barus - was traumatised by the investments question bank and the naked donut run in the erc, also the 1001 nights classes i loved those
+        // bdw - laser cutters you will be missed
+        // hay - nothing beats this place on a sunny day when lots of work needs to be done, and yet i spent most of my time here booking airbnbs or finding clothes
+        // rock - 3rd floor stacks in the morning in the winter - the twenty layers and the scarf with the perfectly placed charging ports and pretty views
+        // nelson entrepreneurship - the nights we spent on the 1010 project where we did everything but the project
+        // quiet green - picnics were had
+        // uel - i remember studying for the arts of asia final here in freshman fall
+        // page rob - meetings at the globe with bisola and syrina
+        // 
+
+
+		// Create a popup variable attached to our map from before
+		var popup = L.popup();
+
+        // END JS
+    </script>
 
 </body>
+
 </html>
