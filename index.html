@@ -37,6 +37,18 @@
             display: inline-block;
         }
 
+        p{
+        text-align: center;
+        padding: 20px;
+        top:300px;
+        background-color: rgb(245, 245, 178);
+        font-family: sans-serif;
+        font-weight: 550;
+        font-style: italic;
+        border: 2.5px solid rgb(192, 192, 117);
+
+        }
+
         /* CUSTOMIZE POP-UPS!  */
         .leaflet-popup-content-wrapper {
             background-color: rgb(245, 245, 178);
@@ -55,7 +67,7 @@
             font-style: italic;
         }
 
-        .leaflet-popup-close-button span {}
+        /* .leaflet-popup-close-button span {} */
 
         /* END CSS */
     </style>
@@ -95,7 +107,6 @@
         // add markers
 
         // main green
-        var marker1 = L.marker([41.827, -71.404]).addTo(map);
         var blueroom = L.marker([41.826848507278235, -71.40351927283476]).addTo(map);
         var fauncesteps = L.marker([41.826708, -71.403313]).addTo(map);
         var bench = L.marker([41.826484, -71.403596]).addTo(map);
@@ -132,37 +143,6 @@
         var mochamp = L.marker([41.83020618876327, -71.40177803314617]).addTo(map);
 
 
-
-
-
-
-
-
-        // to add
-
-
-        var everpol = L.marker([41.827, -71.404]).addTo(map);
-        var archie = L.marker([41.827, -71.404]).addTo(map);
-
-        var ratty = L.marker([41.827, -71.404]).addTo(map);
-        var nelsonent = L.marker([41.827, -71.404]).addTo(map);
-        var nelsongym = L.marker([41.827, -71.404]).addTo(map);
-        var wilbour = L.marker([41.827, -71.404]).addTo(map);
-        var prospect = L.marker([41.827, -71.404]).addTo(map);
-        var indiapoint = L.marker([41.827, -71.404]).addTo(map);
-        var cofx = L.marker([41.827, -71.404]).addTo(map);
-        var pvddonuts = L.marker([41.827, -71.404]).addTo(map);
-        var traderjoes = L.marker([41.827, -71.404]).addTo(map);
-
-        var powerst = L.marker([41.827, -71.404]).addTo(map);
-        var gcb = L.marker([41.827, -71.404]).addTo(map);
-        var ivy = L.marker([41.827, -71.404]).addTo(map);
-        var mencoff = L.marker([41.827, -71.404]).addTo(map);
-        var gregA = L.marker([41.827, -71.404]).addTo(map);
-        var gregB = L.marker([41.827, -71.404]).addTo(map);
-        var thayertunnel = L.marker([41.827, -71.404]).addTo(map);
-
-
         // outside 
         var washingtonplace = L.marker([41.827294159797255, -71.40925254773713]).addTo(map);
         var fleet = L.marker([41.82569397543868, -71.40940124911886]).addTo(map);
@@ -172,19 +152,7 @@
         var pastiche = L.marker([41.827, -71.404]).addTo(map);
 
 
-
-
-
-
-
-
-
-
-
-
-
         // Bind popups to the shapes from before
-        marker1.bindPopup("<b>Hello world!</b><br>I am a popup.");
 
         // main green area
         blueroom.bindPopup("iced lattes with vanilla oat & chocolate chip muffins");
@@ -218,23 +186,46 @@
         //north campus
         andrews.bindPopup("weekend granola bowls and cancun planning"); sidneyfrank.bindPopup("the one amazing room that we always ended up working in on fridays and got kicked out for that 4pm meeting");
 
-        gcb.bindPopup("learnt sanskrit here");
-        nelsongym.bindPopup("learnt sanskrit here");
+        // gcb.bindPopup("learnt sanskrit here");
+        // nelsongym.bindPopup("learnt sanskrit here");
 
         // outside
-        washingtonplace.bindPopup("i learnt how to code this website in the basement of this building");
-        risdgd.bindPopup("my first risd class was here");
-        fleet.bindPopup("weekend granola bowls and cancun planning");
-        benevs.bindPopup("weekend granola bowls and cancun planning");
-        waterman.bindPopup("weekend granola bowls and cancun planning");
-        prospect.bindPopup("weekend granola bowls and cancun planning");
-        indiapoint.bindPopup("weekend granola bowls and cancun planning");
-        traderjoes.bindPopup("weekend granola bowls and cancun planning");
-        cofx.bindPopup("weekend granola bowls and cancun planning");
-        pastiche.bindPopup("weekend granola bowls and cancun planning");
-        pvddonuts.bindPopup("weekend granola bowls and cancun planning");
+        // washingtonplace.bindPopup("i learnt how to code this website in the basement of this building");
+        // risdgd.bindPopup("my first risd class was here");
+        // fleet.bindPopup("weekend granola bowls and cancun planning");
+        // benevs.bindPopup("weekend granola bowls and cancun planning");
+        // waterman.bindPopup("weekend granola bowls and cancun planning");
+        // prospect.bindPopup("weekend granola bowls and cancun planning");
+        // indiapoint.bindPopup("weekend granola bowls and cancun planning");
+        // traderjoes.bindPopup("weekend granola bowls and cancun planning");
+        // cofx.bindPopup("weekend granola bowls and cancun planning");
+        // pastiche.bindPopup("weekend granola bowls and cancun planning");
+        // pvddonuts.bindPopup("weekend granola bowls and cancun planning");
 
 
+        // to add
+
+
+        // var everpol = L.marker([41.827, -71.404]).addTo(map);
+        // var archie = L.marker([41.827, -71.404]).addTo(map);
+
+        // var ratty = L.marker([41.827, -71.404]).addTo(map);
+        // var nelsonent = L.marker([41.827, -71.404]).addTo(map);
+        // var nelsongym = L.marker([41.827, -71.404]).addTo(map);
+        // var wilbour = L.marker([41.827, -71.404]).addTo(map);
+        // var prospect = L.marker([41.827, -71.404]).addTo(map);
+        // var indiapoint = L.marker([41.827, -71.404]).addTo(map);
+        // var cofx = L.marker([41.827, -71.404]).addTo(map);
+        // var pvddonuts = L.marker([41.827, -71.404]).addTo(map);
+        // var traderjoes = L.marker([41.827, -71.404]).addTo(map);
+
+        // var powerst = L.marker([41.827, -71.404]).addTo(map);
+        // var gcb = L.marker([41.827, -71.404]).addTo(map);
+        // var ivy = L.marker([41.827, -71.404]).addTo(map);
+        // var mencoff = L.marker([41.827, -71.404]).addTo(map);
+        // var gregA = L.marker([41.827, -71.404]).addTo(map);
+        // var gregB = L.marker([41.827, -71.404]).addTo(map);
+        // var thayertunnel = L.marker([41.827, -71.404]).addTo(map);
 
         // IDEAS
 
